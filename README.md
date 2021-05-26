@@ -11,6 +11,8 @@ Storage: 550 mb
 ```
 git clone https://github.com/Llanyro/AV_1
 cd AV_1
+git submodule init
+git submodule update
 sudo apt install python3
 pip3 install -r requirements.txt or python3 -m pip3 install -r requirements.txt
 ```
