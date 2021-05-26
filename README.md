@@ -9,6 +9,7 @@ Storage: 550 mb
 
 ## Set-Up
 ```
+git clone https://github.com/Llanyro/AV_1
 sudo apt install python3
 pip3 install -r requirements.txt or python3 -m pip3 install -r requirements.txt
 ```
@@ -21,7 +22,7 @@ python3 main.py -d '/path'
 ```
 ### Select scanners
 Scanners used are:
-* Virustotal: Visutotal api
+* Virustotal: Virustotal api
 * MagicSimpleAnalysis: Analysis of magic numbers and file extensions
 * AI_1: Static analysis with Logistic Regression model
 
