@@ -82,7 +82,7 @@ def print_data(result: dict or list, tabulaciones: int):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Analizador de binarios maliciosos")
     parser.add_argument("-f", "--file", default=None, help="Fichero a escanear")
-    parser.add_argument("-p", "--path", default=None, help="Directorio a escanear")
+    parser.add_argument("-d", "--dir", default=None, help="Directorio a escanear")
     parser.add_argument("-c", "--capa", default=False, action="store_true", help="Muestra las capabilities del escaneo")
     parser.add_argument("-s", "--scanners", default="local", help="Scanners a usar(ai_1, virustotal, magic_ext, local, all)")
     parser.add_argument("-r", "--re_scan", default=False, action="store_true", help="Reinicia el scan ignorando el resultado anterior del mismo binario(Si ya existia)")
@@ -113,9 +113,9 @@ if __name__ == "__main__":
     # Si se ha seleccionado un archivo, lo llevamos a la variable como string
     if args.file is not None:
         work = args.file
-    # Si se ha indicado un path
-    elif args.path is not None:
-        work = [f for f in os.listdir(args.path) if os.path.isfile(os.path.join(args.path, f))]
+    # Si se ha indicado un dir
+    elif args.dir is not None:
+        work = [f for f in os.listdir(args.dir) if os.path.isfile(os.path.join(args.dir, f))]
     else:
         print(parser.print_help())
         exit(0)
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     result = None
 
     if type(work) == list:
-        result = [b.run_analysis(f"{args.path}/{i}", scanners["virustotal"], scanners["ai_1"], scanners["magic_ext"], args.no_save,
+        result = [b.run_analysis(f"{args.dir}/{i}", scanners["virustotal"], scanners["ai_1"], scanners["magic_ext"], args.no_save,
                                  args.re_scan) for i in work]
     else:
         result = b.run_analysis(work, scanners["virustotal"], scanners["ai_1"], scanners["magic_ext"], args.no_save,
