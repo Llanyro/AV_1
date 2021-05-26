@@ -10,11 +10,30 @@ Storage: 550 mb
 ## Set-Up
 ```
 git clone https://github.com/Llanyro/AV_1
+cd AV_1
 sudo apt install python3
 pip3 install -r requirements.txt or python3 -m pip3 install -r requirements.txt
 ```
 
 ## Usage
+```
+$ python3 main.py -h
+usage: main.py [-h] [-f FILE] [-d DIR] [-c] [-s SCANNERS] [-r] [-o OUTPUT] [-n]
+
+Analizador de binarios maliciosos
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Fichero a escanear
+  -d DIR, --dir DIR     Directorio a escanear
+  -c, --capa            Muestra las capabilities del escaneo
+  -s SCANNERS, --scanners SCANNERS
+                        Scanners a usar(ai_1, virustotal, magic_ext, local, all)
+  -r, --re_scan         Reinicia el scan ignorando el resultado anterior del mismo binario(Si ya existia)
+  -o OUTPUT, --output OUTPUT
+                        Genera un fichero output que contiene el resultado del analisis en (json o plain)
+  -n, --no_save         Fuerza a no guardar los resultados en la base de datos local
+```
 ### Analize file or files in directory
 ```
 python3 main.py -f '/path/file'
