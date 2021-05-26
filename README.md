@@ -1,8 +1,8 @@
 # AV_1
 
-## System Requierements
+## System Requirements
 ```
-OS: Any (Tested Ubuntu 20.04.2 LTS)
+OS: Any (Tested in Ubuntu 20.04.2 LTS)
 Software: Python 3
 Storage: 550 mb
 ```
@@ -10,7 +10,7 @@ Storage: 550 mb
 ## Set-Up
 ```
 sudo apt install python3
-pip3 install -r requierements.txt or python3 -m pip3 install -r requierements.txt
+pip3 install -r requirements.txt or python3 -m pip3 install -r requirements.txt
 ```
 
 ## Usage

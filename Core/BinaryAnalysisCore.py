@@ -54,11 +54,11 @@ class BinaryAnalysisCore:
     def run_virutotal(self, filename: str, hash_dict: dict, already_sent: bool = False) -> dict:
         # Probamos que virustotal tenga el binario en su base de datos
         resultado_busqueda_virustotal = self.__search_virus_total(hash_dict)
-        print(resultado_busqueda_virustotal)
+        #print(resultado_busqueda_virustotal)
 
         # Transformamos el diccionario en una lista de True-False para saber si se contiene algun analisis
         resultado_listado: list = self.__virutotal_results_to_list(resultado_busqueda_virustotal)
-        print(resultado_listado)
+        #print(resultado_listado)
 
         # Si no se ha recibido al menos un analisis
         if any(resultado_listado) is not True:
