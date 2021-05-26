@@ -1,0 +1,3 @@
+[submodule "SimplePythonLogger"]
+	path = SimplePythonLogger
+	url = https://github.com/Llanyro/SimplePythonLogger
