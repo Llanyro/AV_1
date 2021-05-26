@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 from datetime import date
-from Core.logger import Logger
+from SimplePythonLogger.logger import Logger
 from enum import Enum
 from json import load, loads, dump, dumps
 
